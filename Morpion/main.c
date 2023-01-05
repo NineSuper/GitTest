@@ -6,7 +6,7 @@
 /*   By: tde-los- <tde-los-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 04:31:07 by tde-los-          #+#    #+#             */
-/*   Updated: 2023/01/05 14:42:27 by tde-los-         ###   ########.fr       */
+/*   Updated: 2023/01/05 14:44:21 by tde-los-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ void    aff_grille(void)
     char    X;
 
     i = 0;
-    X = "x";
+    X = 'x';
     ligne =  "--------------------\n";
-    colone = "   &x   |      |      \n";
+    colone = "   "&X;"   |      |      \n";
     space =  "                    \n";
     ft_putstr(ligne);
     while (i < 3)
