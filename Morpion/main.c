@@ -6,7 +6,7 @@
 /*   By: tde-los- <tde-los-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 04:31:07 by tde-los-          #+#    #+#             */
-/*   Updated: 2023/01/05 14:55:34 by tde-los-         ###   ########.fr       */
+/*   Updated: 2023/01/05 14:57:32 by tde-los-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,7 @@ void    aff_grille(void)
         ft_putchar(X);
         ft_putstr(colone);
         ft_putchar(O);
-        ft_putstr(colone)
+        ft_putstr(colone);
         i++;
     }
     ft_putstr("\n");
