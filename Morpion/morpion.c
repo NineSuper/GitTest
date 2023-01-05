@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   morpion.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
+/*   By: tde-los- <tde-los-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 17:26:04 by ninesuper         #+#    #+#             */
-/*   Updated: 2023/01/05 19:12:07 by ninesuper        ###   ########.fr       */
+/*   Updated: 2023/01/05 21:44:22 by tde-los-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,9 +30,9 @@ void    ft_affgrille(int b, int player, int tour)
         while (i < 3)
         {
             if (nb == b && player == 1)
-                ft_putstr("X");
+                ft_putstr(ONE);
             else if (nb == b && player == 2)
-                ft_putstr("O");
+                ft_putstr(TWO);
             else
                 ft_putnbr(nb);
             if (i <= 1)

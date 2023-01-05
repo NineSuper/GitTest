@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_h.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
+/*   By: tde-los- <tde-los-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 13:25:21 by tde-los-          #+#    #+#             */
-/*   Updated: 2023/01/05 19:07:46 by ninesuper        ###   ########.fr       */
+/*   Updated: 2023/01/05 21:44:21 by tde-los-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@
 # define COLONE "  |  "
 # define PLAYERONE 1
 # define PLAYERTWO 2
+# define ONE "X"
+# define TWO "O"
 
 # include <stdio.h>
 
