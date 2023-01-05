@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tde-los- <tde-los-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 04:31:07 by tde-los-          #+#    #+#             */
-/*   Updated: 2023/01/05 14:57:32 by tde-los-         ###   ########.fr       */
+/*   Updated: 2023/01/05 15:06:01 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,15 +24,14 @@ void    aff_grille(void)
     i = 0;
     X = 'X';
     O = 'O';
-    ligne =  "--------------------\n";
-    colone = "|";
+    ligne =  "----------------------------------\n";
+    colone = "  |  ";
     space =  "                    \n";
     ft_putstr(ligne);
     while (i < 3)
     {
-        ft_putchar(X);
         ft_putstr(colone);
-        ft_putchar(O);
+        ft_putchar(X);
         ft_putstr(colone);
         i++;
     }
