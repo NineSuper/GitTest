@@ -19,7 +19,7 @@ Pour utiliser ce projet, vous devez avoir un compilateur C (comme GCC) installé
 
 Téléchargez le code source sur votre ordinateur
 Ouvrez une invite de commandes et naviguez jusqu'au répertoire du projet
-Tapez la commande gcc morpion.c pour compiler le code
+Tapez la commande gcc *.c pour compiler le code
 Tapez ./a.out
 Amusez vous !
 
