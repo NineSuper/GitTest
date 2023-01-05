@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   morpion.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/05 04:31:07 by tde-los-          #+#    #+#             */
-/*   Updated: 2023/01/05 17:46:13 by ninesuper        ###   ########.fr       */
+/*   Created: 2023/01/05 17:26:04 by ninesuper         #+#    #+#             */
+/*   Updated: 2023/01/05 17:48:12 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_h.h"
 
-void    initialiser_grille(void)
+void    ft_playerone(int b)
 {
     char    *ligne;
     char    *colone;
@@ -35,7 +35,10 @@ void    initialiser_grille(void)
         ft_putstr("    ");
         while (i < 3)
         {
-            ft_putnbr(nb);
+            if (nb == b)
+                ft_putstr("X");
+            else
+                ft_putnbr(nb);
             if (i <= 1)
                 ft_putstr(colone);
             nb++;
@@ -46,15 +49,4 @@ void    initialiser_grille(void)
         j++;
     }
     ft_putstr(ligne);
-}
-
-int main(int argc, char **argv)
-{
-    int     nb;
-
-    nb = 0;
-    initialiser_grille();
-    ft_putstr("Joueur_X tu commences, choisi un numero !\n");
-    scanf( "%d", &nb);
-    ft_playerone(nb);
 }
