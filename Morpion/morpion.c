@@ -6,13 +6,13 @@
 /*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 17:26:04 by ninesuper         #+#    #+#             */
-/*   Updated: 2023/01/05 22:07:21 by ninesuper        ###   ########.fr       */
+/*   Updated: 2023/01/05 23:23:38 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_h.h"
 
-void    ft_affgrille(int b, int player, int tour)
+void    ft_affgrille(int b, int player)
 {
     int             i;
     int             j;
@@ -45,23 +45,4 @@ void    ft_affgrille(int b, int player, int tour)
         j++;
     }
     ft_putstr(LIGNE);
-    if (tour == 9)
-        ft_putstr(END_GAME);
-        return;
-    tour = ft_tour(tour, player);
-    ft_putstr(SPACE);
-    ft_putnbr(tour);
-}
-
-int     ft_tour(int tour, int player)
-{
-    if (player == PLAYERONE)
-    {
-        ft_putstr("PlayerOne");
-    }
-    if (player == PLAYERTWO)
-    {
-        ft_putstr("PlayerTwo");
-    }
-    return (tour + 1);
 }
