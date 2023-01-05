@@ -1,21 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_h.h                                             :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
+/*   By: tde-los- <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/05 13:25:21 by tde-los-          #+#    #+#             */
-/*   Updated: 2023/01/05 13:34:00 by ninesuper        ###   ########.fr       */
+/*   Created: 2022/12/17 19:33:29 by tde-los-          #+#    #+#             */
+/*   Updated: 2022/12/17 19:37:23 by tde-los-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_H_H
-# define FT_H_H
+#include "ft_h.h"
 
-void    ft_putchar(char c);
-void	ft_putstr(char *str);
-int         ft_putnbr(int nb);
-int		    ft_strlen(char *str);
-
-#endif
+int	ft_putnbr(int nb)
+{
+	if (nb < 0)
+		nb = -nb;
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	return (nb);
+}
