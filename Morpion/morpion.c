@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   morpion.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tde-los- <tde-los-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 17:26:04 by ninesuper         #+#    #+#             */
-/*   Updated: 2023/01/05 21:44:22 by tde-los-         ###   ########.fr       */
+/*   Updated: 2023/01/05 22:07:21 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,8 @@ void    ft_affgrille(int b, int player, int tour)
     }
     ft_putstr(LIGNE);
     if (tour == 9)
-    {
-        ft_putstr("Partie terminée");
+        ft_putstr(END_GAME);
         return;
-    }
     tour = ft_tour(tour, player);
     ft_putstr(SPACE);
     ft_putnbr(tour);
@@ -57,13 +55,13 @@ void    ft_affgrille(int b, int player, int tour)
 
 int     ft_tour(int tour, int player)
 {
-    if (player == 1)
+    if (player == PLAYERONE)
     {
         ft_putstr("PlayerOne");
     }
-    if (player == 2)
+    if (player == PLAYERTWO)
     {
-        ft_putstr("Player2");
+        ft_putstr("PlayerTwo");
     }
     return (tour + 1);
 }

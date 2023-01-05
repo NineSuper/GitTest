@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_h.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tde-los- <tde-los-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 13:25:21 by tde-los-          #+#    #+#             */
-/*   Updated: 2023/01/05 21:44:21 by tde-los-         ###   ########.fr       */
+/*   Updated: 2023/01/05 21:55:38 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # define PLAYERTWO 2
 # define ONE "X"
 # define TWO "O"
+# define END_GAME "Partie terminée\n"
 
 # include <stdio.h>
 

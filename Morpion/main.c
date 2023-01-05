@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tde-los- <tde-los-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 04:31:07 by tde-los-          #+#    #+#             */
-/*   Updated: 2023/01/05 21:44:24 by tde-los-         ###   ########.fr       */
+/*   Updated: 2023/01/05 22:54:35 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,29 @@ void    initialiser_grille(void)
 int main(int argc, char **argv)
 {
     int     nb;
+    int     i;
 
-    nb = 0;
+    nb = 1;
+    i = 0;
     initialiser_grille();
     ft_putstr("Joueur_X tu commences, choisi un numero !\n");
     scanf( "%d", &nb);
-    ft_affgrille(nb, PLAYERONE, 1);
+    i++;
+    while (i < 9)
+    {
+        if (i % 2 == 0)
+        {
+            ft_affgrille(nb, PLAYERONE, 1);
+            ft_putstr("Joueur_X, choisi un numero !\n");
+            scanf( "%d", &nb);
+        }
+        else
+        {
+            ft_affgrille(nb, PLAYERTWO, 1);
+            ft_putstr("Joueur_O, choisi un numero !\n");
+            scanf( "%d", &nb);
+        }
+        i++;
+    }
+    ft_putstr(END_GAME);
 }
