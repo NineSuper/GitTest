@@ -3,22 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
+/*   By: tde-los- <tde-los-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 04:31:07 by tde-los-          #+#    #+#             */
-/*   Updated: 2023/01/05 15:18:00 by ninesuper        ###   ########.fr       */
+/*   Updated: 2023/01/05 15:26:20 by tde-los-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_h.h"
 
-void    aff_grille(void)
+void    initialiser_grille(void)
 {
     char    *ligne;
     char    *colone;
     char    *space;
-    char        X;
-    char        O;
     int             i;
     int             j;
     int             nb;
@@ -26,8 +24,6 @@ void    aff_grille(void)
     i = 0;
     j = 0;
     nb = 1;
-    X = 'X';
-    O = 'O';
     ligne =  "----------------------------------\n";
     colone = "  |  ";
     space =  "                    \n";
@@ -47,9 +43,10 @@ void    aff_grille(void)
         j++;
     }
     ft_putstr(ligne);
+    ft_putstr("Joueur_X tu commences, choisi un numero !")
 }
 
 int main(int argc, char **argv)
 {
-    aff_grille();
+    initialiser_grille();
 }
