@@ -6,13 +6,13 @@
 /*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 17:26:04 by ninesuper         #+#    #+#             */
-/*   Updated: 2023/01/05 17:48:12 by ninesuper        ###   ########.fr       */
+/*   Updated: 2023/01/05 18:10:06 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_h.h"
 
-void    ft_playerone(int b)
+void    ft_affgrille(int b, int player)
 {
     char    *ligne;
     char    *colone;
@@ -35,8 +35,10 @@ void    ft_playerone(int b)
         ft_putstr("    ");
         while (i < 3)
         {
-            if (nb == b)
+            if (nb == b && player == 1)
                 ft_putstr("X");
+            else if (nb == b && player == 2)
+                ft_putstr("O");
             else
                 ft_putnbr(nb);
             if (i <= 1)
