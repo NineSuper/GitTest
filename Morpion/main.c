@@ -6,7 +6,7 @@
 /*   By: tde-los- <tde-los-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 04:31:07 by tde-los-          #+#    #+#             */
-/*   Updated: 2023/01/05 14:28:41 by tde-los-         ###   ########.fr       */
+/*   Updated: 2023/01/05 14:29:37 by tde-los-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ void    aff_grille(void)
     while (i < 3)
     {
         ft_putstr(colone);
-        if (i == 3)
+        if (i == 2)
         {
            ft_putstr(space - 1);
            break; 
