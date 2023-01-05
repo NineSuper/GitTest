@@ -6,13 +6,21 @@
 /*   By: tde-los- <tde-los-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 04:31:07 by tde-los-          #+#    #+#             */
-/*   Updated: 2023/01/05 13:49:28 by tde-los-         ###   ########.fr       */
+/*   Updated: 2023/01/05 14:04:18 by tde-los-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_h.h"
 
+void    aff_grille(void)
+{
+    char    *ligne;
+
+    ligne = "------";
+    ft_putstr(ligne);
+}
+
 int main(int argc, char **argv)
 {
-    ft_putstr(argv[1]);
+    aff_grille();
 }
