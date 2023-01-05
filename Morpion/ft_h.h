@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_h.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tde-los- <tde-los-@student.42.fr>          +#+  +:+       +#+        */
+/*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 13:25:21 by tde-los-          #+#    #+#             */
-/*   Updated: 2023/01/05 15:24:50 by tde-los-         ###   ########.fr       */
+/*   Updated: 2023/01/05 15:39:59 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_H_H
 # define FT_H_H
+
+# include <stdio.h>
 
 void    ft_putchar(char c);
 void	ft_putstr(char *str);
