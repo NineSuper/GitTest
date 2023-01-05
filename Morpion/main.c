@@ -6,7 +6,7 @@
 /*   By: tde-los- <tde-los-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 04:31:07 by tde-los-          #+#    #+#             */
-/*   Updated: 2023/01/05 15:26:20 by tde-los-         ###   ########.fr       */
+/*   Updated: 2023/01/05 15:27:14 by tde-los-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void    initialiser_grille(void)
         j++;
     }
     ft_putstr(ligne);
-    ft_putstr("Joueur_X tu commences, choisi un numero !")
+    ft_putstr("Joueur_X tu commences, choisi un numero !");
 }
 
 int main(int argc, char **argv)
