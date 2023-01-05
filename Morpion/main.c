@@ -6,18 +6,13 @@
 /*   By: tde-los- <tde-los-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 04:31:07 by tde-los-          #+#    #+#             */
-/*   Updated: 2023/01/05 13:21:50 by tde-los-         ###   ########.fr       */
+/*   Updated: 2023/01/05 13:49:28 by tde-los-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ft_h.h"
+
 int main(int argc, char **argv)
 {
-    int     i ;
-
-    i = 0;
-    while (argv[1][i] != '\0')
-    {
-        write(1, &argv[1][i], 1);
-        i++;
-    }
+    ft_putstr(argv[1]);
 }
