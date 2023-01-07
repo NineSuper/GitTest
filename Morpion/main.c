@@ -6,7 +6,7 @@
 /*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 04:31:07 by tde-los-          #+#    #+#             */
-/*   Updated: 2023/01/07 01:11:37 by ninesuper        ###   ########.fr       */
+/*   Updated: 2023/01/07 01:49:01 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,12 +57,12 @@ int     main(int argc, char **argv)
     {
         if (i % 2 == 0)
         {
-            ft_affgrille(nb, PLAYERONE);
+            ft_affgrille(nb, PLAYERONE, tab);
             ft_putstr("Joueur_X, choisi un numero !\n");
         }
         else
         {
-            ft_affgrille(nb, PLAYERTWO);
+            ft_affgrille(nb, PLAYERTWO, tab);
             ft_putstr("Joueur_O, choisi un numero !\n");
         }
         nb = get_number(tab, i);

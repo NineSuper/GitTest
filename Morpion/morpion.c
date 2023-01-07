@@ -6,13 +6,13 @@
 /*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 17:26:04 by ninesuper         #+#    #+#             */
-/*   Updated: 2023/01/07 01:11:52 by ninesuper        ###   ########.fr       */
+/*   Updated: 2023/01/07 01:48:16 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_h.h"
 
-void    ft_affgrille(int b, int player)
+void    ft_affgrille(int b, int player, int *tab)
 {
     int             i;
     int             j;
@@ -29,22 +29,38 @@ void    ft_affgrille(int b, int player)
         ft_putstr("    ");
         while (i < 3)
         {
-            if (player == 1 && nb == b)
-                ft_putstr(ONE);
-            else if (player == 2 && nb == b)
-                ft_putstr(TWO);
+            if (nb == b || nb == checknumber(tab, nb))
+            {
+                if (player == 1)
+                    ft_putstr(ONE);
+                else if (player == 2)
+                    ft_putstr(TWO);
+            }
             else
-                ft_putnbr(nb);
+            ft_putnbr(nb);
             if (i <= 1)
                 ft_putstr(COLONE);
-            nb++;
             i++;
+            nb++;
         }
         ft_putstr(SPACE);
         ft_putstr(SPACE);
         j++;
     }
     ft_putstr(LIGNE);
+}
+
+int     checknumber(int *tab, int j)
+{
+    int     i;
+    
+    i = 0;
+    while (tab[i] != '\0')
+    {
+        if (tab[i] == j)
+            return (j);
+        i++;
+    }
 }
 
 int     get_number(int *tab, int i)
