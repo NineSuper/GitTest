@@ -6,7 +6,7 @@
 /*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 13:25:21 by tde-los-          #+#    #+#             */
-/*   Updated: 2023/01/05 23:23:43 by ninesuper        ###   ########.fr       */
+/*   Updated: 2023/01/07 01:11:38 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,19 @@
 # define PLAYERTWO 2
 # define ONE "X"
 # define TWO "O"
-# define END_GAME "Partie terminée\n"
+# define END_GAME "Partie terminée"
 
 # include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
 
 void    ft_putchar(char c);
 void	ft_putstr(char *str);
 void    initialiser_grille(void);
 void    ft_affgrille(int b, int player);
+void    print_tab(int *tab, int i);
+int         get_number(int *tab, int i);
+int         checknumber(char *str, int nb);
 int         ft_putnbr(int nb);
 int		    ft_strlen(char *str);
 

@@ -6,7 +6,7 @@
 /*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 17:26:04 by ninesuper         #+#    #+#             */
-/*   Updated: 2023/01/05 23:23:38 by ninesuper        ###   ########.fr       */
+/*   Updated: 2023/01/07 01:11:52 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,9 @@ void    ft_affgrille(int b, int player)
         ft_putstr("    ");
         while (i < 3)
         {
-            if (nb == b && player == 1)
+            if (player == 1 && nb == b)
                 ft_putstr(ONE);
-            else if (nb == b && player == 2)
+            else if (player == 2 && nb == b)
                 ft_putstr(TWO);
             else
                 ft_putnbr(nb);
@@ -45,4 +45,23 @@ void    ft_affgrille(int b, int player)
         j++;
     }
     ft_putstr(LIGNE);
+}
+
+int     get_number(int *tab, int i)
+{
+    int nb;
+    scanf("%d", &nb);
+    tab[i] = nb;
+    return (nb);
+}
+
+void    print_tab(int *tab, int i)
+{
+    int j;
+    j = 0;
+    while (j < i)
+    {
+        printf("%d ", tab[j]);
+        j++;
+    }
 }

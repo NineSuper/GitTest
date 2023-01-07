@@ -6,7 +6,7 @@
 /*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 04:31:07 by tde-los-          #+#    #+#             */
-/*   Updated: 2023/01/05 23:22:58 by ninesuper        ###   ########.fr       */
+/*   Updated: 2023/01/07 01:11:37 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,32 +42,33 @@ void    initialiser_grille(void)
     ft_putstr(LIGNE);
 }
 
-int main(int argc, char **argv)
+int     main(int argc, char **argv)
 {
-    int     nb;
+    int     tab[9];
     int     i;
+    int     nb;
 
-    nb = 1;
     i = 0;
     initialiser_grille();
     ft_putstr("Joueur_X tu commences, choisi un numero !\n");
-    scanf( "%d", &nb);
+    nb = get_number(tab, i);
     i++;
-    while (i < 9)
+    while (i <= 9)
     {
         if (i % 2 == 0)
         {
             ft_affgrille(nb, PLAYERONE);
             ft_putstr("Joueur_X, choisi un numero !\n");
-            scanf( "%d", &nb);
         }
         else
         {
             ft_affgrille(nb, PLAYERTWO);
             ft_putstr("Joueur_O, choisi un numero !\n");
-            scanf( "%d", &nb);
         }
+        nb = get_number(tab, i);
         i++;
     }
+    print_tab(tab, i);
+    ft_putstr("\n");
     ft_putstr(END_GAME);
 }
