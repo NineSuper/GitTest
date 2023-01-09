@@ -6,7 +6,7 @@
 /*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 13:25:21 by tde-los-          #+#    #+#             */
-/*   Updated: 2023/01/07 01:24:41 by ninesuper        ###   ########.fr       */
+/*   Updated: 2023/01/09 02:18:54 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,9 @@ void    ft_affgrille(int b, int player, int *tab);
 void    print_tab(int *tab, int i);
 int         get_number(int *tab, int i);
 int         checknumber(int *tab, int j);
+int         checkplayer(int k);
 int         ft_putnbr(int nb);
 int		    ft_strlen(char *str);
+int         ft_intlen(int *tab);
 
 #endif

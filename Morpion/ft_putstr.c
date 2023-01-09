@@ -6,7 +6,7 @@
 /*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/17 19:49:54 by tde-los-          #+#    #+#             */
-/*   Updated: 2023/01/05 17:19:28 by ninesuper        ###   ########.fr       */
+/*   Updated: 2023/01/09 00:08:12 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,16 @@ int	ft_strlen(char *str)
 
 	i = 0;
 	while (str[i] != '\0')
+		i++;
+	return (i);
+}
+
+int	ft_intlen(int *tab)
+{
+	int		i;
+
+	i = 0;
+	while(tab[i] != '\0')
 		i++;
 	return (i);
 }

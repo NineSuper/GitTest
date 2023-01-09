@@ -6,7 +6,7 @@
 /*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 17:26:04 by ninesuper         #+#    #+#             */
-/*   Updated: 2023/01/07 01:48:16 by ninesuper        ###   ########.fr       */
+/*   Updated: 2023/01/09 12:09:19 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,14 @@
 
 void    ft_affgrille(int b, int player, int *tab)
 {
-    int             i;
-    int             j;
-    int             nb;
+    int     i;
+    int     j;
+    int     k;
+    int     nb;
 
     i = 0;
     j = 0;
+    k = 1;
     nb = 1;
     ft_putstr(LIGNE);
     ft_putstr(SPACE);
@@ -29,12 +31,18 @@ void    ft_affgrille(int b, int player, int *tab)
         ft_putstr("    ");
         while (i < 3)
         {
-            if (nb == b || nb == checknumber(tab, nb))
+            if (nb == checknumber(tab, nb))
             {
-                if (player == 1)
+                if (checkplayer(k) == 1) //lire ligne 35
+                {
                     ft_putstr(ONE);
-                else if (player == 2)
+                    k = 2;
+                }
+                else if (checkplayer(k) == 2) //
+                {
                     ft_putstr(TWO);
+                    k = 1;
+                }
             }
             else
             ft_putnbr(nb);
@@ -48,6 +56,14 @@ void    ft_affgrille(int b, int player, int *tab)
         j++;
     }
     ft_putstr(LIGNE);
+}
+
+int     checkplayer(int k) // actuelle;ent en train de revoir cette fonction 
+{
+    if (k == 2)
+        return(2);
+    else 
+        return(1);
 }
 
 int     checknumber(int *tab, int j)
@@ -77,7 +93,7 @@ void    print_tab(int *tab, int i)
     j = 0;
     while (j < i)
     {
-        printf("%d ", tab[j]);
+        printf("%d", tab[j]);
         j++;
     }
 }
