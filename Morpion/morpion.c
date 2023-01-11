@@ -6,7 +6,7 @@
 /*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 17:26:04 by ninesuper         #+#    #+#             */
-/*   Updated: 2023/01/11 16:17:52 by ninesuper        ###   ########.fr       */
+/*   Updated: 2023/01/11 20:30:00 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,15 +50,12 @@ void    ft_morpion()
 
     i = 0;
     nb = 0;
-    tab = malloc(sizeof(int) + 10);
+    tab = malloc(sizeof(int) * 10);
     initialiser_grille();
     while (i <= 9)
     {
         if (i == 9)
-        {
-            ft_affgrille(nb, PLAYERONE, tab);
             break;
-        }
         if (i % 2 == 0)
         {
             ft_putstr(MSG_PLAYERX);
@@ -76,6 +73,7 @@ void    ft_morpion()
     ft_putstr(END_GAME);
     ft_putstr("DEBUG TAB : ");
     print_tab(tab, i);
+    free(tab);
 }
 
 void    ft_affgrille(int nb, int player, int *tab)
@@ -96,7 +94,7 @@ void    ft_affgrille(int nb, int player, int *tab)
         {
             if (nombre == checknumber(tab, nombre))
             {
-                ft_putstr(ONE);
+                ft_getsymbol(tab, nombre, player);
             }
             else
                 ft_putnbr(nombre);
@@ -110,7 +108,6 @@ void    ft_affgrille(int nb, int player, int *tab)
         j++;
     }
     ft_putstr(LIGNE);
-    ft_putstr(SPACE);
 }
 
 int     checknumber(int *tab, int j)
@@ -132,18 +129,17 @@ int     ft_getsymbol(int *tab, int i, int player)
     int     k;
 
     k = 0;
-    while (tab[k] != '\0')
+    while (k <= i)
     {
-        if (tab[i] == tab[k])
+        if (tab[k] == i)
             {
-                if (i % 2 == 0)
-                    return (1);
+                if (k % 2 == 0)
+                    ft_putstr(ONE);
                 else
-                    return (2);  
+                    ft_putstr(TWO);
             }
         k++;
     }
-    return (0);
 }
 
 int     get_number(int *tab, int i)
