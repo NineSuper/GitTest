@@ -6,7 +6,7 @@
 /*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 17:26:04 by ninesuper         #+#    #+#             */
-/*   Updated: 2023/01/11 20:30:00 by ninesuper        ###   ########.fr       */
+/*   Updated: 2023/01/11 20:55:51 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,7 +94,7 @@ void    ft_affgrille(int nb, int player, int *tab)
         {
             if (nombre == checknumber(tab, nombre))
             {
-                ft_getsymbol(tab, nombre, player);
+                ft_getsymbol(tab, nombre);
             }
             else
                 ft_putnbr(nombre);
@@ -124,12 +124,12 @@ int     checknumber(int *tab, int j)
     return (0);
 }
 
-int     ft_getsymbol(int *tab, int i, int player)
+int     ft_getsymbol(int *tab, int i)
 {
     int     k;
 
     k = 0;
-    while (k <= i)
+    while (k <= 10)
     {
         if (tab[k] == i)
             {
