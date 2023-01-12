@@ -6,7 +6,7 @@
 /*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 13:25:21 by tde-los-          #+#    #+#             */
-/*   Updated: 2023/01/11 20:50:34 by ninesuper        ###   ########.fr       */
+/*   Updated: 2023/01/12 01:09:21 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # define COLONE "  |  "
 # define MSG_PLAYERX "Joueur_X a toi de jouer !\n"
 # define MSG_PLAYERO "Joueur_O a toi de jouer !\n"
+# define MSG_DOUBLONS "DOUBLE ! nouveau chiffre : "
 # define PLAYERONE 1
 # define PLAYERTWO 2
 # define ONE "X"
@@ -36,6 +37,7 @@ void    initialiser_grille();
 void    ft_affgrille(int b, int player, int *tab);
 void    print_tab(int *tab, int i);
 int         ft_getsymbol(int *tab, int i);
+int         get_number(int *tab, int i);
 int         get_number(int *tab, int i);
 int         checknumber(int *tab, int j);
 int         ft_putnbr(int nb);
