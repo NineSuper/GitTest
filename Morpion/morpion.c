@@ -6,7 +6,7 @@
 /*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 17:26:04 by ninesuper         #+#    #+#             */
-/*   Updated: 2023/01/12 01:07:42 by ninesuper        ###   ########.fr       */
+/*   Updated: 2023/01/12 01:38:30 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,11 +142,19 @@ int     ft_getsymbol(int *tab, int i)
     }
 }
 
-int     ft_checkdoublons(int *tab, int nb)
+int     ft_checkdoublons(int *tab, int nb, int max)
 {
     int     i;
 
     i = 0;
+    if (max == 1)
+    {
+        if (nb <= 0 || nb >= 10)
+        {
+            ft_putstr(MSG_BADNUMBER);
+            return (1);
+        }
+    }
     while (tab[i] != '\0')
     {
         if (tab[i] == nb)
@@ -162,12 +170,14 @@ int     ft_checkdoublons(int *tab, int nb)
 int     get_number(int *tab, int i)
 {
     int     nb;
-    int     k;
-
-    k = 0;
     scanf("%d", &nb);
-    while (ft_checkdoublons(tab, nb) != 0)
+    while (ft_checkdoublons(tab, nb, 0) != 0)
         scanf("%d", &nb);
+    if (nb <= 0 || nb >= 10)
+    {
+        while (ft_checkdoublons(tab, nb, 1) != 0)
+            scanf("%d", &nb);
+    }
     tab[i] = nb;
     return (nb);
 }
