@@ -6,7 +6,7 @@
 /*   By: ninesuper <ninesuper@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 17:26:04 by ninesuper         #+#    #+#             */
-/*   Updated: 2023/01/12 01:38:30 by ninesuper        ###   ########.fr       */
+/*   Updated: 2023/01/18 00:26:56 by ninesuper        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,9 +71,15 @@ void    ft_morpion()
         i++;
     }
     ft_putstr(END_GAME);
-    ft_putstr("DEBUG TAB : ");
-    print_tab(tab, i);
+    //ft_putstr("DEBUG TAB : ");
+    //print_tab(tab, i);
     free(tab);
+    ft_putstr(NEW_GAME);
+    scanf("%d", &nb);
+    if (nb == 1)
+        ft_morpion();
+    else if (nb == 2)
+        ft_hasardnumber();
 }
 
 void    ft_affgrille(int nb, int player, int *tab)
@@ -129,7 +135,7 @@ int     ft_getsymbol(int *tab, int i)
     int     k;
 
     k = 0;
-    while (k <= 10)
+    while (k <= ft_intlen(tab))
     {
         if (tab[k] == i)
             {
