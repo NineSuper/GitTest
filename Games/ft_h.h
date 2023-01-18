@@ -13,7 +13,7 @@
 #ifndef FT_H_H
 # define FT_H_H
 
-# define GAME "Choissisez un jeu suivant : \n1 : Morpion\n2 : Nombre Aleatoire\n3 : Aucune idee\n"
+# define GAME "Choisissez un jeu suivant : \n1 : Morpion\n2 : Nombre Aleatoire\n3 : Aucune idee\n"
 # define SPACE "\n"
 # define LIGNE "---------------------\n"
 # define COLONE "  |  "
@@ -33,9 +33,9 @@
 # define TRY " coups restant\n"
 # define LOOSER "Perdu le bon chiffre était : "
 # define VICTORY "Gagné !"
-# define DIFFICULTY "Bonjour, voici les differénts niveau possibles :\n1 : Facile 15 coups\n2 : Moyen 10 coups\n3 : Difficle 5 coups\n4 : Hardcore 1 coups\n5 : Personnalisé\n"
-# define CUSTOM_PARTY "Vous avez chosi une party personnalisé rentrer une valeur pour choisir le nombre de coups : "
-# define BIG_NB "Votre chiffre doit etre compris entre 1 et 100"
+# define DIFFICULTY "Bonjour, voici les differénts niveau possibles :\n1 : Facile 15 coups\n2 : Moyen 10 coups\n3 : Difficle 5 coups\n4 : Hardcore 1 coup\n5 : Personnalisé\n"
+# define CUSTOM_PARTY "Vous avez chosi une party personnalisée rentrer une valeur pour choisir le nombre de coups : "
+# define BIG_NB "Votre chiffre doit être compris entre 1 et 100"
 
 # include <stdio.h>
 # include <stdlib.h>
